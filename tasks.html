@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المهمة - كفو</title>
+  <style>
+    body { font-family: 'Tahoma'; background: #f5f5f5; margin: 0; padding-bottom: 80px; }
+    .header { text-align: center; padding: 15px; font-size: 18px; font-weight: bold; background: white; }
+    .task { background: white; margin: 10px; padding: 15px; border-radius: 10px; border-right: 4px solid #FFC107; }
+    .price { color: #00C851; font-size: 20px; font-weight: bold; }
+    .btn-task { width: 100%; padding: 10px; background: #FFC107; border: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+    .footer { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
+    .footer-item { text-align: center; font-size: 12px; color: #777; }
+    .footer-item.active { color: #FFC107; }
+  </style>
+</head>
+<body>
+
+  <div class="header">المهمة اليومية</div>
+
+  <div class="task">
+    <div><b>مهمة رقم 1</b></div>
+    <div style="font-size:14px; margin:5px 0;">مشاركة منتج + لقطة شاشة</div>
+    <div class="price">الربح: IQD 2000</div>
+    <button class="btn-task" onclick="alert('تم ارسال المهمة للادمن')">استلام المهمة</button>
+  </div>
+
+  <div class="task">
+    <div><b>مهمة رقم 2</b></div>
+    <div style="font-size:14px; margin:5px 0;">تقييم 5 نجوم للمتجر</div>
+    <div class="price">الربح: IQD 1500</div>
+    <button class="btn-task" onclick="alert('تم ارسال المهمة للادمن')">استلام المهمة</button>
+  </div>
+
+  <div class="footer">
+    <div class="footer-item">👤<br>حسابي</div>
+    <div class="footer-item">📄<br>الطلبات</div>
+    <div class="footer-item">📋<br>المعاملات</div>
+    <div class="footer-item active">👑<br>مهمة</div>
+    <div class="footer-item" onclick="window.location.href='index.html'">🏠<br>الرئيسية</div>
+  </div>
+
+</body>
+</html>
