@@ -2,41 +2,63 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>المهمة - كفو</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مهمة - VIP</title>
   <style>
-    body { font-family: 'Tahoma'; background: #f5f5f5; margin: 0; padding-bottom: 80px; }
-    .header { text-align: center; padding: 15px; font-size: 18px; font-weight: bold; background: white; }
-    .task { background: white; margin: 10px; padding: 15px; border-radius: 10px; border-right: 4px solid #FFC107; }
-    .price { color: #00C851; font-size: 20px; font-weight: bold; }
-    .btn-task { width: 100%; padding: 10px; background: #FFC107; border: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+    body { font-family: 'Tahoma'; background: #FFF8E1; margin: 0; padding-bottom: 80px; }
+    .header { background: linear-gradient(90deg, #FFC107, #FFA000); color: black; text-align: center; padding: 20px; font-size: 20px; font-weight: bold; }
+    .vip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
+    .vip-card { background: white; border-radius: 15px; padding: 12px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.1); border: 2px solid #FFC107; }
+    .vip-card img { width: 100%; border-radius: 10px; height: 120px; object-fit: cover; }
+    .vip-card h3 { margin: 8px 0 4px 0; font-size: 16px; }
+    .vip-card .price { font-size: 15px; font-weight: bold; color: #000; }
+    .percent { background: #FFC107; color: black; padding: 4px 12px; border-radius: 20px; font-weight: bold; display: inline-block; margin: 5px 0; font-size: 13px; }
+    .btn-task { background: #FFC107; color: black; border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; width: 100%; margin-top: 8px; cursor: pointer; }
     .footer { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
-    .footer-item { text-align: center; font-size: 12px; color: #777; }
-    .footer-item.active { color: #FFC107; }
+    .footer-item { text-align: center; font-size: 12px; color: #777; cursor: pointer; }
+    .footer-item.active { color: #FFC107; font-weight: bold; }
   </style>
 </head>
 <body>
-
-  <div class="header">المهمة اليومية</div>
-
-  <div class="task">
-    <div><b>مهمة رقم 1</b></div>
-    <div style="font-size:14px; margin:5px 0;">مشاركة منتج + لقطة شاشة</div>
-    <div class="price">الربح: IQD 2000</div>
-    <button class="btn-task" onclick="alert('تم ارسال المهمة للادمن')">استلام المهمة</button>
+  <div class="header">اختيار الباقة</div>
+  
+  <div class="vip-grid">
+    <div class="vip-card">
+      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP1">
+      <h3>هيكل VIP1</h3>
+      <p class="price">حد الرصيد: IQD 5000</p>
+      <span class="percent">نسبة العمولة 2.9%</span>
+      <button class="btn-task" onclick="alert('يلزمك رصيد 5000 دينار لتفعيل VIP1')">استلام المهمة</button>
+    </div>
+    <div class="vip-card">
+      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP2">
+      <h3>التكيل VIP2</h3>
+      <p class="price">حد الرصيد: IQD 10000</p>
+      <span class="percent">نسبة العمولة 3%</span>
+      <button class="btn-task" onclick="alert('يلزمك رصيد 10000 دينار لتفعيل VIP2')">استلام المهمة</button>
+    </div>
+    <div class="vip-card">
+      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP3">
+      <h3>حزان VIP3</h3>
+      <p class="price">حد الرصيد: IQD 30000</p>
+      <span class="percent">نسبة العمولة 3.5%</span>
+      <button class="btn-task" onclick="alert('يلزمك رصيد 30000 دينار لتفعيل VIP3')">استلام المهمة</button>
+    </div>
+    <div class="vip-card">
+      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP4">
+      <h3>مياين VIP4</h3>
+      <p class="price">حد الرصيد: IQD 50000</p>
+      <span class="percent">نسبة العمولة 3.8%</span>
+      <button class="btn-task" onclick="alert('يلزمك رصيد 50000 دينار لتفعيل VIP4')">استلام المهمة</button>
+    </div>
   </div>
 
-  <div class="task">
-    <div><b>مهمة رقم 2</b></div>
-    <div style="font-size:14px; margin:5px 0;">تقييم 5 نجوم للمتجر</div>
-    <div class="price">الربح: IQD 1500</div>
-    <button class="btn-task" onclick="alert('تم ارسال المهمة للادمن')">استلام المهمة</button>
-  </div>
-<div class="footer">
+  <div class="footer">
     <div class="footer-item" onclick="window.location.href='account.html'">👤<br>حسابي</div>
-    <div class="footer-item" onclick="window.location.href='orders.html'">📄<br>الطلبات</div>
-    <div class="footer-item" onclick="window.location.href='transactions.html'">📋<br>المعاملات</div>
-    <div class="footer-item active" onclick="window.location.href='tasks.html'">👑<br>مهمة</div>
+    <div class="footer-item" onclick="window.location.href='orders.html'">📋<br>الطلبات</div>
+    <div class="footer-item" onclick="window.location.href='transactions.html'">📄<br>المعاملات</div>
+    <div class="footer-item active">👑<br>مهمة</div>
     <div class="footer-item" onclick="window.location.href='index.html'">🏠<br>الرئيسية</div>
-</div>
+  </div>
 </body>
 </html>
