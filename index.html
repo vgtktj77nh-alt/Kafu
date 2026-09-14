@@ -3,69 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>كفو VLP</title>
+  <title>كفو - مركز التسوق</title>
   <style>
-    body {
-      text-align: center;
-      font-family: 'Arial';
-      padding-top: 80px;
-      background-color: #f5f5f5;
-    }
-    img {
-      width: 220px;
-      height: auto;
-      border-radius: 20px;
-    }
-    h1 {
-      color: #00C851;
-      margin-top: 25px;
-      font-size: 32px;
-    }
-    p {
-      color: #555;
-    }
+    body { font-family: 'Tahoma'; background: #f5f5f5; margin: 0; padding-bottom: 80px; }
+    .header { text-align: center; padding: 15px; font-size: 18px; font-weight: bold; background: white; }
+    .banner { width: 100%; height: 150px; object-fit: cover; }
+    .profile-card { background: #FFE082; margin: 10px; padding: 15px; border-radius: 15px; display: flex; align-items: center; gap: 10px; }
+    .profile-card img { width: 50px; height: 50px; border-radius: 50%; }
+    .balance { color: #00C851; font-size: 18px; font-weight: bold; }
+    .buttons { display: flex; gap: 10px; margin: 10px; }
+    .btn { flex: 1; padding: 12px; border: none; border-radius: 10px; font-weight: bold; }
+    .btn-deposit { background: #FFC107; color: black; }
+    .btn-withdraw { background: #FFF; color: #FFC107; border: 1px solid #FFC107; }
+    .products-title { margin: 20px 10px 10px; font-weight: bold; border-right: 3px solid #FFC107; padding-right: 8px; }
+    .product { background: white; margin: 10px; padding: 10px; border-radius: 10px; display: flex; gap: 10px; }
+    .product img { width: 80px; height: 80px; border-radius: 8px; }
+    .price { color: #00C851; font-weight: bold; }
+    .footer { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
+    .footer-item { text-align: center; font-size: 12px; color: #777; }
+    .footer-item.active { color: #FFC107; }
   </style>
 </head>
 <body>
-     <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="شعار كفو"> 
-  <h1>مرحبا بيكم في كفو VLP</h1>
- <p>اول موقع رسمي لشركة كفو</p>
-  <!-- قسم المنتجات -->
-<section style="padding: 60px 20px; background: white;">
-  <h2 style="text-align: center; color: #00C851; font-size: 28px; margin-bottom: 40px;">
-    ✨ منتجات العناية والتجميل من كفو ✨
-  </h2>
 
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px;">
-    
-    <!-- منتج 1 -->
-    <div style="width: 250px; border: 1px solid #eee; border-radius: 15px; padding: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-      <div style="font-size: 60px;">🧴</div>
-      <h3 style="color: #333;">سيروم الوجه</h3>
-      <p style="color: #777; font-size: 14px;">ترطيب عميق ونضارة 24 ساعة</p>
-      <p style="color: #00C851; font-size: 20px; font-weight: bold;">25,000 د.ع</p>
-      <button style="background: #00C851; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">اطلبي هسه</button>
+  <div class="header">مركز التسوق</div>
+  
+  <img src="279EAA1F-76B2-4A1C4183205BE35.png" class="banner" alt="banner">
+
+  <div class="profile-card">
+    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="user">
+    <div style="flex:1">
+      <div>Kafu112230</div>
+      <div style="font-size:12px; color:#555;">ID 547592163</div>
+      <div class="balance">IQD 225501.31</div>
     </div>
-
-    <!-- منتج 2 -->
-    <div style="width: 250px; border: 1px solid #eee; border-radius: 15px; padding: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-      <div style="font-size: 60px;">💄</div>
-      <h3 style="color: #333;">مجموعة مكياج</h3>
-      <p style="color: #777; font-size: 14px;">ماركات عالمية واصلي 100%</p>
-      <p style="color: #00C851; font-size: 20px; font-weight: bold;">80,000 د.ع</p>
-      <button style="background: #00C851; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">اطلبي هسه</button>
+    <div style="text-align:center;">
+      <div style="font-size:24px;">100</div>
+      <div style="font-size:12px;">درجة الاتقان</div>
     </div>
-
-    <!-- منتج 3 -->
-    <div style="width: 250px; border: 1px solid #eee; border-radius: 15px; padding: 15px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-      <div style="font-size: 60px;">🧖‍♀️</div>
-      <h3 style="color: #333;">ماسكات العناية</h3>
-      <p style="color: #777; font-size: 14px;">للبشرة والشعر والجسم</p>
-      <p style="color: #00C851; font-size: 20px; font-weight: bold;">15,000 د.ع</p>
-      <button style="background: #00C851; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer;">اطلبي هسه</button>
-    </div>
-
   </div>
-</section>
+
+  <div class="buttons">
+    <button class="btn btn-deposit">📦 إيداع</button>
+    <button class="btn btn-withdraw">💰 سحب</button>
+  </div>
+
+  <div class="products-title">المنتجات الأكثر مبيعاً اليوم</div>
+
+  <div class="product">
+    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="منتج">
+    <div style="flex:1">
+      <div>سيروم الوجه الذهبي للعناية بالبشرة</div>
+      <div style="font-size:12px;">السعر: <span class="price">IQD 35000</span></div>
+      <div style="font-size:12px;">المبيعات اليومية: <span style="color:red;">12</span></div>
+      <div style="font-size:12px;">معدل نمو المبيعات: <span style="color:orange;">150%</span></div>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="منتج">
+    <div style="flex:1">
+      <div>مجموعة مكياج كفو الاحترافية</div>
+      <div style="font-size:12px;">السعر: <span class="price">IQD 80000</span></div>
+      <div style="font-size:12px;">المبيعات اليومية: <span style="color:red;">8</span></div>
+      <div style="font-size:12px;">معدل نمو المبيعات: <span style="color:orange;">120%</span></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-item active">🏠<br>الرئيسية</div>
+    <div class="footer-item">👑<br>مهمة</div>
+    <div class="footer-item">📋<br>المعاملات</div>
+    <div class="footer-item">📄<br>الطلبات</div>
+    <div class="footer-item">👤<br>حسابي</div>
+  </div>
+
 </body>
 </html>
