@@ -5,27 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>المهام - VLP</title>
 <style>
-  body { background: #0a0a0a; color: #fff; font-family: 'Tajawal', sans-serif; margin: 0; padding: 20px; }
-  .container { max-width: 900px; margin: 0 auto; }
-  h1 { text-align: center; color: #FFD700; margin-bottom: 30px; }
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+  body { 
+    background: #0a0a0a; 
+    color: #fff; 
+    font-family: 'Tajawal', sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h1 { 
+    text-align: center; 
+    color: #FFD700; 
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  /* الشبكة الجديدة */
+  .vip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 بصف */
+    gap: 20px;
+  }
+
   .vip-card {
     background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
     border: 2px solid #FFD700;
     border-radius: 15px;
     padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
+    text-align: center;
+    transition: 0.3s;
   }
-  .vip-card img { width: 120px; height: 120px; border-radius: 10px; object-fit: cover; }
-  .vip-info { flex: 1; }
-  .vip-title { font-size: 22px; color: #FFD700; margin: 0 0 10px 0; }
-  .vip-range { font-size: 18px; color: #00ff88; margin-bottom: 10px; }
-  .vip-desc { color: #ccc; font-size: 14px; }
-  .btn { background: #FFD700; color: #000; padding: 10px 20px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-  @media(max-width: 600px) {
-    .vip-card { flex-direction: column; text-align: center; }
+  .vip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  
+  .vip-card img { 
+    width: 100%; 
+    max-width: 200px;
+    height: 180px; 
+    border-radius: 10px; 
+    object-fit: cover; 
+    margin-bottom: 15px;
+  }
+  .vip-title { font-size: 20px; color: #FFD700; margin: 0 0 10px 0; font-weight: 700; }
+  .vip-range { font-size: 16px; color: #00ff88; margin-bottom: 10px; font-weight: 700; }
+  .vip-desc { color: #ccc; font-size: 14px; margin-bottom: 15px; min-height: 40px; }
+  .btn { 
+    background: #FFD700; 
+    color: #000; 
+    padding: 12px 25px; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    width: 100%;
+    font-size: 16px;
+  }
+  .btn:hover { background: #ffc700; }
+
+  /* للموبايل يصير 1 بصف */
+  @media(max-width: 768px) {
+    .vip-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>
@@ -33,94 +77,81 @@
 <div class="container">
   <h1>🏆 اختار مستوى الـ VIP الخاص بك</h1>
 
-  <!-- VIP 1 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/8VGUdNO_d.webp" alt="VIP1">
-    <div class="vip-info">
+  <div class="vip-grid">
+    
+    <!-- VIP 1 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/8VGUdNO_d.webp" alt="VIP1">
       <h2 class="vip-title">VIP1 - المبتدأ</h2>
       <p class="vip-range">5,000 - 50,000 IQD</p>
       <p class="vip-desc">ابدأ رحلتك مع اول مستوى واربح يوميا</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
-  <!-- VIP 2 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/ByzcNLI_d.webp" alt="VIP2">
-    <div class="vip-info">
+    <!-- VIP 2 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/ByzcNLI_d.webp" alt="VIP2">
       <h2 class="vip-title">VIP2 - المحترف</h2>
       <p class="vip-range">50,001 - 100,000 IQD</p>
       <p class="vip-desc">ارباح اكبر ومهام اسرع</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
-  <!-- VIP 3 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/cYE9OBF_d.webp" alt="VIP3">
-    <div class="vip-info">
+    <!-- VIP 3 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/cYE9OBF_d.webp" alt="VIP3">
       <h2 class="vip-title">VIP3 - الخبير</h2>
       <p class="vip-range">100,001 - 200,000 IQD</p>
       <p class="vip-desc">مكافآت يومية مضاعفة</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
-  <!-- VIP 4 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/cYgbDfv_d.webp" alt="VIP4">
-    <div class="vip-info">
+    <!-- VIP 4 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/cYgbDfv_d.webp" alt="VIP4">
       <h2 class="vip-title">VIP4 - النخبة</h2>
       <p class="vip-range">200,001 - 350,000 IQD</p>
       <p class="vip-desc">دعم خاص وسحب فوري</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
-  <!-- VIP 5 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/IxRVUGG_d.webp" alt="VIP5">
-    <div class="vip-info">
+    <!-- VIP 5 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/IxRVUGG_d.webp" alt="VIP5">
       <h2 class="vip-title">VIP5 - الاسطوري</h2>
       <p class="vip-range">350,001 - 500,000 IQD</p>
       <p class="vip-desc">ارباح ثابتة كل ساعة</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
-  <!-- VIP 6 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/hwAIza3_d.webp" alt="VIP6">
-    <div class="vip-info">
+    <!-- VIP 6 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/hwAIza3_d.webp" alt="VIP6">
       <h2 class="vip-title">VIP6 - الملكي</h2>
       <p class="vip-range">500,001 - 750,000 IQD</p>
       <p class="vip-desc">بونص ترحيبي + مهام VIP</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
-  <!-- VIP 7 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/KueK0K3_d.webp" alt="VIP7">
-    <div class="vip-info">
+    <!-- VIP 7 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/KueK0K3_d.webp" alt="VIP7">
       <h2 class="vip-title">VIP7 - الذهبي</h2>
       <p class="vip-range">750,001 - 950,000 IQD</p>
       <p class="vip-desc">اعلى عائد + مدير حساب خاص</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
-  <!-- VIP 8 -->
-  <div class="vip-card">
-    <img src="https://i.imgur.com/FLgqSa0_d.webp" alt="VIP8">
-    <div class="vip-info">
+    <!-- VIP 8 -->
+    <div class="vip-card">
+      <img src="https://i.imgur.com/FLgqSa0_d.webp" alt="VIP8">
       <h2 class="vip-title">VIP8 - الامبراطوري</h2>
       <p class="vip-range">950,001 - 1,000,000 IQD</p>
       <p class="vip-desc">كل المميزات + ارباح لا محدودة</p>
       <button class="btn">تفعيل الان</button>
     </div>
-  </div>
 
+  </div>
 </div>
 </body>
 </html>
