@@ -1,64 +1,126 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مهمة - VIP</title>
-  <style>
-    body { font-family: 'Tahoma'; background: #FFF8E1; margin: 0; padding-bottom: 80px; }
-    .header { background: linear-gradient(90deg, #FFC107, #FFA000); color: black; text-align: center; padding: 20px; font-size: 20px; font-weight: bold; }
-    .vip-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
-    .vip-card { background: white; border-radius: 15px; padding: 12px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.1); border: 2px solid #FFC107; }
-    .vip-card img { width: 100%; border-radius: 10px; height: 120px; object-fit: cover; }
-    .vip-card h3 { margin: 8px 0 4px 0; font-size: 16px; }
-    .vip-card .price { font-size: 15px; font-weight: bold; color: #000; }
-    .percent { background: #FFC107; color: black; padding: 4px 12px; border-radius: 20px; font-weight: bold; display: inline-block; margin: 5px 0; font-size: 13px; }
-    .btn-task { background: #FFC107; color: black; border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; width: 100%; margin-top: 8px; cursor: pointer; }
-    .footer { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
-    .footer-item { text-align: center; font-size: 12px; color: #777; cursor: pointer; }
-    .footer-item.active { color: #FFC107; font-weight: bold; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المهام - VLP</title>
+<style>
+  body { background: #0a0a0a; color: #fff; font-family: 'Tajawal', sans-serif; margin: 0; padding: 20px; }
+  .container { max-width: 900px; margin: 0 auto; }
+  h1 { text-align: center; color: #FFD700; margin-bottom: 30px; }
+  .vip-card {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    border: 2px solid #FFD700;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .vip-card img { width: 120px; height: 120px; border-radius: 10px; object-fit: cover; }
+  .vip-info { flex: 1; }
+  .vip-title { font-size: 22px; color: #FFD700; margin: 0 0 10px 0; }
+  .vip-range { font-size: 18px; color: #00ff88; margin-bottom: 10px; }
+  .vip-desc { color: #ccc; font-size: 14px; }
+  .btn { background: #FFD700; color: #000; padding: 10px 20px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+  @media(max-width: 600px) {
+    .vip-card { flex-direction: column; text-align: center; }
+  }
+</style>
 </head>
 <body>
-  <div class="header">اختيار الباقة</div>
-  
-  <div class="vip-grid">
-    <div class="vip-card">
-      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP1">
-      <h3>هيكل VIP1</h3>
-      <p class="price">حد الرصيد: IQD 5000</p>
-      <span class="percent">نسبة العمولة 2.9%</span>
-      <button class="btn-task" onclick="alert('يلزمك رصيد 5000 دينار لتفعيل VIP1')">استلام المهمة</button>
-    </div>
-    <div class="vip-card">
-      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP2">
-      <h3>التكيل VIP2</h3>
-      <p class="price">حد الرصيد: IQD 10000</p>
-      <span class="percent">نسبة العمولة 3%</span>
-      <button class="btn-task" onclick="alert('يلزمك رصيد 10000 دينار لتفعيل VIP2')">استلام المهمة</button>
-    </div>
-    <div class="vip-card">
-      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP3">
-      <h3>حزان VIP3</h3>
-      <p class="price">حد الرصيد: IQD 30000</p>
-      <span class="percent">نسبة العمولة 3.5%</span>
-      <button class="btn-task" onclick="alert('يلزمك رصيد 30000 دينار لتفعيل VIP3')">استلام المهمة</button>
-    </div>
-    <div class="vip-card">
-      <img src="https://i.imgur.com/3QZQZQZ.png" alt="VIP4">
-      <h3>مياين VIP4</h3>
-      <p class="price">حد الرصيد: IQD 50000</p>
-      <span class="percent">نسبة العمولة 3.8%</span>
-      <button class="btn-task" onclick="alert('يلزمك رصيد 50000 دينار لتفعيل VIP4')">استلام المهمة</button>
+<div class="container">
+  <h1>🏆 اختار مستوى الـ VIP الخاص بك</h1>
+
+  <!-- VIP 1 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/8VGUdNO_d.webp" alt="VIP1">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP1 - المبتدأ</h2>
+      <p class="vip-range">5,000 - 50,000 IQD</p>
+      <p class="vip-desc">ابدأ رحلتك مع اول مستوى واربح يوميا</p>
+      <button class="btn">تفعيل الان</button>
     </div>
   </div>
 
-  <div class="footer">
-    <div class="footer-item" onclick="window.location.href='account.html'">👤<br>حسابي</div>
-    <div class="footer-item" onclick="window.location.href='orders.html'">📋<br>الطلبات</div>
-    <div class="footer-item" onclick="window.location.href='transactions.html'">📄<br>المعاملات</div>
-    <div class="footer-item active">👑<br>مهمة</div>
-    <div class="footer-item" onclick="window.location.href='index.html'">🏠<br>الرئيسية</div>
+  <!-- VIP 2 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/ByzcNLI_d.webp" alt="VIP2">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP2 - المحترف</h2>
+      <p class="vip-range">50,001 - 100,000 IQD</p>
+      <p class="vip-desc">ارباح اكبر ومهام اسرع</p>
+      <button class="btn">تفعيل الان</button>
+    </div>
   </div>
+
+  <!-- VIP 3 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/cYE9OBF_d.webp" alt="VIP3">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP3 - الخبير</h2>
+      <p class="vip-range">100,001 - 200,000 IQD</p>
+      <p class="vip-desc">مكافآت يومية مضاعفة</p>
+      <button class="btn">تفعيل الان</button>
+    </div>
+  </div>
+
+  <!-- VIP 4 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/cYgbDfv_d.webp" alt="VIP4">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP4 - النخبة</h2>
+      <p class="vip-range">200,001 - 350,000 IQD</p>
+      <p class="vip-desc">دعم خاص وسحب فوري</p>
+      <button class="btn">تفعيل الان</button>
+    </div>
+  </div>
+
+  <!-- VIP 5 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/IxRVUGG_d.webp" alt="VIP5">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP5 - الاسطوري</h2>
+      <p class="vip-range">350,001 - 500,000 IQD</p>
+      <p class="vip-desc">ارباح ثابتة كل ساعة</p>
+      <button class="btn">تفعيل الان</button>
+    </div>
+  </div>
+
+  <!-- VIP 6 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/hwAIza3_d.webp" alt="VIP6">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP6 - الملكي</h2>
+      <p class="vip-range">500,001 - 750,000 IQD</p>
+      <p class="vip-desc">بونص ترحيبي + مهام VIP</p>
+      <button class="btn">تفعيل الان</button>
+    </div>
+  </div>
+
+  <!-- VIP 7 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/KueK0K3_d.webp" alt="VIP7">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP7 - الذهبي</h2>
+      <p class="vip-range">750,001 - 950,000 IQD</p>
+      <p class="vip-desc">اعلى عائد + مدير حساب خاص</p>
+      <button class="btn">تفعيل الان</button>
+    </div>
+  </div>
+
+  <!-- VIP 8 -->
+  <div class="vip-card">
+    <img src="https://i.imgur.com/FLgqSa0_d.webp" alt="VIP8">
+    <div class="vip-info">
+      <h2 class="vip-title">VIP8 - الامبراطوري</h2>
+      <p class="vip-range">950,001 - 1,000,000 IQD</p>
+      <p class="vip-desc">كل المميزات + ارباح لا محدودة</p>
+      <button class="btn">تفعيل الان</button>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
