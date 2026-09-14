@@ -1,4 +1,5 @@
 <script>
+// هذا الحارس - اذا ماكو تسجيل دخول يرجعك للوجن
 if(!localStorage.getItem("userName")){
   window.location.href = "login.html";
 }
@@ -6,101 +7,23 @@ if(!localStorage.getItem("userName")){
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>كفو - مركز التسوق</title>
-  <style>
-    body { font-family: 'Tahoma'; background: #f5f5f5; margin: 0; padding-bottom: 80px; }
-    .header { text-align: center; padding: 15px; font-size: 18px; font-weight: bold; background: white; }
-    .banner { width: 100%; height: 150px; object-fit: cover; }
-    .profile-card { background: #FFE082; margin: 10px; padding: 15px; border-radius: 15px; display: flex; align-items: center; gap: 10px; }
-    .profile-card img { width: 50px; height: 50px; border-radius: 50%; }
-    .balance { color: #00C851; font-size: 18px; font-weight: bold; }
-    .buttons { display: flex; gap: 10px; margin: 10px; }
-    .btn { flex: 1; padding: 12px; border: none; border-radius: 10px; font-weight: bold; }
-    .btn-deposit { background: #FFC107; color: black; }
-    .btn-withdraw { background: #FFF; color: #FFC107; border: 1px solid #FFC107; }
-    .products-title { margin: 20px 10px 10px; font-weight: bold; border-right: 3px solid #FFC107; padding-right: 8px; }
-    .product { background: white; margin: 10px; padding: 10px; border-radius: 10px; display: flex; gap: 10px; }
-    .product img { width: 80px; height: 80px; border-radius: 8px; }
-    .price { color: #00C851; font-weight: bold; }
-    .footer { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
-    .footer-item { text-align: center; font-size: 12px; color: #777; }
-    .footer-item.active { color: #FFC107; }
-  </style>
+<meta charset="UTF-8">
+<title>Kafu</title>
 </head>
 <body>
+<h1>اهلا بك في Kafu</h1>
+<p>مرحبا <span id="user"></span></p>
+<button onclick="logout()">تسجيل خروج</button>
 
-  <div class="header">مركز التسوق</div>
-  
-  <img src="279EAA1F-76B2-4A1C4183205BE35.png" class="banner" alt="banner">
+<script>
+// يطبع الاسم
+document.getElementById('user').innerText = localStorage.getItem("userName");
 
-  <div class="profile-card">
-    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="user">
-    <div style="flex:1">
-      <div>Kafu112230</div>
-      <div style="font-size:12px; color:#555;">ID 547592163</div>
-      <div class="balance">IQD 225501.31</div>
-    </div>
-    <div style="text-align:center;">
-      <div style="font-size:24px;">100</div>
-      <div style="font-size:12px;">درجة الاتقان</div>
-    </div>
-  </div>
-
-  <div class="buttons">
-  <button class="btn btn-deposit" onclick="window.location.href='https://t.me/kafuAdmin1' ">📦 ايداع</button>
-<button class="btn btn-withdraw" onclick="window.location.href='https://t.me/kafuAdmin1'">💰 سحب</button>
-  </div>
-
-  <div class="products-title">المنتجات الأكثر مبيعاً اليوم</div>
-
-  <div class="product">
-    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="منتج">
-    <div style="flex:1">
-      <div>سيروم الوجه الذهبي للعناية بالبشرة</div>
-      <div style="font-size:12px;">السعر: <span class="price">IQD 35000</span></div>
-      <div style="font-size:12px;">المبيعات اليومية: <span style="color:red;">12</span></div>
-      <div style="font-size:12px;">معدل نمو المبيعات: <span style="color:orange;">150%</span></div>
-    </div>
-  </div>
-
-  <div class="product">
-    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="منتج">
-    <div style="flex:1">
-      <div>مجموعة مكياج كفو الاحترافية</div>
-      <div style="font-size:12px;">السعر: <span class="price">IQD 80000</span></div>
-      <div style="font-size:12px;">المبيعات اليومية: <span style="color:red;">8</span></div>
-      <div style="font-size:12px;">معدل نمو المبيعات: <span style="color:orange;">120%</span></div>
-    </div>
-  </div>
-<div class="product">
-    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="منتج">
-    <div style="flex:1">
-      <div>روج كفو ثابت 24 ساعة</div>
-      <div style="font-size:12px;">السعر: <span class="price">IQD 12000</span></div>
-      <div style="font-size:12px;">المبيعات اليومية: <span style="color:red;">25</span></div>
-      <div style="font-size:12px;">معدل نمو المبيعات: <span style="color:orange;">200%</span></div>
-    </div>
-  </div>
-
-<div class="product">
-    <img src="279EAA1F-76B2-4A1C4183205BE35.png" alt="منتج">
-    <div style="flex:1">
-      <div>ماسك الذهب للوجه</div>
-      <div style="font-size:12px;">السعر: <span class="price">IQD 15000</span></div>
-      <div style="font-size:12px;">المبيعات اليومية: <span style="color:red;">18</span></div>
-      <div style="font-size:12px;">معدل نمو المبيعات: <span style="color:orange;">180%</span></div>
-    </div>
-  </div>
-  <div class="footer"><div class="footer-item" onclick="window.location.href='account.html'">👤<br>حسابي</div>
-<div class="footer-item" onclick="window.location.href='index.html'">🏠<br>الرئيسية</div>
-    <div class="footer-item active">🏠<br>الرئيسية</div>
-    <div class="footer-item" onclick="window.location.href='tasks.html'">👑<br>مهمة</div>
-    <div class="footer-item">📋<br>المعاملات</div>
-    <div class="footer-item">📄<br>الطلبات</div>
-    <div class="footer-item">👤<br>حسابي</div>
-  </div>
-
+// دالة تسجيل الخروج
+function logout(){
+  localStorage.clear();
+  window.location.href = "login.html";
+}
+</script>
 </body>
 </html>
