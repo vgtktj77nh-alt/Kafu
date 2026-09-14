@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الطلبات - كفو</title>
+  <style>
+    body { font-family: 'Tahoma'; background: #f5f5f5; margin: 0; padding-bottom: 80px; }
+    .header { background: #FFC107; color: black; text-align: center; padding: 20px; font-size: 20px; font-weight: bold; }
+    .empty { padding: 50px; color: #777; text-align: center; font-size: 16px; }
+    .footer { position: fixed; bottom: 0; width: 100%; background: white; display: flex; justify-content: space-around; padding: 10px 0; border-top: 1px solid #ddd; }
+    .footer-item { text-align: center; font-size: 12px; color: #777; cursor: pointer; }
+    .footer-item.active { color: #FFC107; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="header">الطلبات</div>
+  <div class="empty">لا توجد طلبات حاليا 📄</div>
+  
+  <div class="footer">
+    <div class="footer-item" onclick="window.location.href='account.html'">👤<br>حسابي</div>
+    <div class="footer-item active">📄<br>الطلبات</div>
+    <div class="footer-item" onclick="window.location.href='transactions.html'">📋<br>المعاملات</div>
+    <div class="footer-item" onclick="window.location.href='tasks.html'">👑<br>مهمة</div>
+    <div class="footer-item" onclick="window.location.href='index.html'">🏠<br>الرئيسية</div>
+  </div>
+</body>
+</html>
